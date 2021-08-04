@@ -22,60 +22,20 @@ Partial Class Ventana2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.chk500 = New System.Windows.Forms.CheckBox()
-        Me.chk1000 = New System.Windows.Forms.CheckBox()
-        Me.radPaypal = New System.Windows.Forms.RadioButton()
-        Me.radTarjeta = New System.Windows.Forms.RadioButton()
         Me.btnRegresar = New System.Windows.Forms.Button()
         Me.btnPagar = New System.Windows.Forms.Button()
         Me.lblResultado = New System.Windows.Forms.Label()
+        Me.cbProductos = New System.Windows.Forms.ComboBox()
+        Me.lbPasarelas = New System.Windows.Forms.ListBox()
+        Me.imgProductos = New System.Windows.Forms.PictureBox()
+        Me.imgPasarelas = New System.Windows.Forms.PictureBox()
+        CType(Me.imgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgPasarelas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'chk500
-        '
-        Me.chk500.AutoSize = True
-        Me.chk500.Location = New System.Drawing.Point(34, 26)
-        Me.chk500.Name = "chk500"
-        Me.chk500.Size = New System.Drawing.Size(153, 29)
-        Me.chk500.TabIndex = 0
-        Me.chk500.Text = "Camisa 500"
-        Me.chk500.UseVisualStyleBackColor = True
-        '
-        'chk1000
-        '
-        Me.chk1000.AutoSize = True
-        Me.chk1000.Location = New System.Drawing.Point(34, 67)
-        Me.chk1000.Name = "chk1000"
-        Me.chk1000.Size = New System.Drawing.Size(144, 29)
-        Me.chk1000.TabIndex = 1
-        Me.chk1000.Text = "Tenis 1000"
-        Me.chk1000.UseVisualStyleBackColor = True
-        '
-        'radPaypal
-        '
-        Me.radPaypal.AutoSize = True
-        Me.radPaypal.Location = New System.Drawing.Point(371, 25)
-        Me.radPaypal.Name = "radPaypal"
-        Me.radPaypal.Size = New System.Drawing.Size(202, 29)
-        Me.radPaypal.TabIndex = 2
-        Me.radPaypal.TabStop = True
-        Me.radPaypal.Text = "Pago con paypal"
-        Me.radPaypal.UseVisualStyleBackColor = True
-        '
-        'radTarjeta
-        '
-        Me.radTarjeta.AutoSize = True
-        Me.radTarjeta.Location = New System.Drawing.Point(371, 67)
-        Me.radTarjeta.Name = "radTarjeta"
-        Me.radTarjeta.Size = New System.Drawing.Size(205, 29)
-        Me.radTarjeta.TabIndex = 3
-        Me.radTarjeta.TabStop = True
-        Me.radTarjeta.Text = "Pago con tarjeta"
-        Me.radTarjeta.UseVisualStyleBackColor = True
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(34, 136)
+        Me.btnRegresar.Location = New System.Drawing.Point(34, 322)
         Me.btnRegresar.Name = "btnRegresar"
         Me.btnRegresar.Size = New System.Drawing.Size(130, 44)
         Me.btnRegresar.TabIndex = 4
@@ -84,7 +44,7 @@ Partial Class Ventana2
         '
         'btnPagar
         '
-        Me.btnPagar.Location = New System.Drawing.Point(371, 136)
+        Me.btnPagar.Location = New System.Drawing.Point(371, 322)
         Me.btnPagar.Name = "btnPagar"
         Me.btnPagar.Size = New System.Drawing.Size(130, 44)
         Me.btnPagar.TabIndex = 4
@@ -94,37 +54,75 @@ Partial Class Ventana2
         'lblResultado
         '
         Me.lblResultado.AutoSize = True
-        Me.lblResultado.Location = New System.Drawing.Point(34, 230)
+        Me.lblResultado.Location = New System.Drawing.Point(34, 416)
         Me.lblResultado.Name = "lblResultado"
         Me.lblResultado.Size = New System.Drawing.Size(142, 25)
         Me.lblResultado.TabIndex = 5
         Me.lblResultado.Text = "lblResultado"
+        '
+        'cbProductos
+        '
+        Me.cbProductos.FormattingEnabled = True
+        Me.cbProductos.Items.AddRange(New Object() {"Camisas 500", "Tenis 1000"})
+        Me.cbProductos.Location = New System.Drawing.Point(34, 47)
+        Me.cbProductos.Name = "cbProductos"
+        Me.cbProductos.Size = New System.Drawing.Size(162, 33)
+        Me.cbProductos.TabIndex = 6
+        '
+        'lbPasarelas
+        '
+        Me.lbPasarelas.FormattingEnabled = True
+        Me.lbPasarelas.ItemHeight = 25
+        Me.lbPasarelas.Items.AddRange(New Object() {"Paypal", "Tarjeta"})
+        Me.lbPasarelas.Location = New System.Drawing.Point(371, 47)
+        Me.lbPasarelas.Name = "lbPasarelas"
+        Me.lbPasarelas.Size = New System.Drawing.Size(120, 79)
+        Me.lbPasarelas.TabIndex = 7
+        '
+        'imgProductos
+        '
+        Me.imgProductos.Location = New System.Drawing.Point(34, 164)
+        Me.imgProductos.Name = "imgProductos"
+        Me.imgProductos.Size = New System.Drawing.Size(156, 114)
+        Me.imgProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgProductos.TabIndex = 8
+        Me.imgProductos.TabStop = False
+        '
+        'imgPasarelas
+        '
+        Me.imgPasarelas.Location = New System.Drawing.Point(371, 164)
+        Me.imgPasarelas.Name = "imgPasarelas"
+        Me.imgPasarelas.Size = New System.Drawing.Size(156, 114)
+        Me.imgPasarelas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgPasarelas.TabIndex = 8
+        Me.imgPasarelas.TabStop = False
         '
         'Ventana2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.imgPasarelas)
+        Me.Controls.Add(Me.imgProductos)
+        Me.Controls.Add(Me.lbPasarelas)
+        Me.Controls.Add(Me.cbProductos)
         Me.Controls.Add(Me.lblResultado)
         Me.Controls.Add(Me.btnPagar)
         Me.Controls.Add(Me.btnRegresar)
-        Me.Controls.Add(Me.radTarjeta)
-        Me.Controls.Add(Me.radPaypal)
-        Me.Controls.Add(Me.chk1000)
-        Me.Controls.Add(Me.chk500)
         Me.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Name = "Ventana2"
         Me.Text = "Ventana2"
+        CType(Me.imgProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgPasarelas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents chk500 As CheckBox
-    Friend WithEvents chk1000 As CheckBox
-    Friend WithEvents radPaypal As RadioButton
-    Friend WithEvents radTarjeta As RadioButton
     Friend WithEvents btnRegresar As Button
     Friend WithEvents btnPagar As Button
     Friend WithEvents lblResultado As Label
+    Friend WithEvents cbProductos As ComboBox
+    Friend WithEvents lbPasarelas As ListBox
+    Friend WithEvents imgProductos As PictureBox
+    Friend WithEvents imgPasarelas As PictureBox
 End Class

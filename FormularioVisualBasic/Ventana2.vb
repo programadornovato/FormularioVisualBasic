@@ -6,25 +6,25 @@
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
         Dim total = 0
         Dim pasarela = ""
-        Dim conChk = 0
-        Dim conRad = 0
-        If chk500.Checked = True Then
+        Dim conProd = 0
+        Dim conPasarelas = 0
+        If cbProductos.Text = "Camisas 500" Then
             total = total + 500
-            conChk = conChk + 1
+            conProd = conProd + 1
         End If
-        If chk1000.Checked = True Then
+        If cbProductos.Text = "Tenis 1000" Then
             total = total + 1000
-            conChk = conChk + 1
+            conProd = conProd + 1
         End If
-        If radPaypal.Checked = True Then
+        If lbPasarelas.Text = "Paypal" Then
             pasarela = "Pago con paypal "
-            conRad = conRad + 1
+            conPasarelas = conPasarelas + 1
         End If
-        If radTarjeta.Checked = True Then
+        If lbPasarelas.Text = "Tarjeta" Then
             pasarela = "Pago con tarjeta "
-            conRad = conRad + 1
+            conPasarelas = conPasarelas + 1
         End If
-        If conChk > 0 And conRad > 0 Then
+        If conProd > 0 And conPasarelas > 0 Then
             lblResultado.Text = pasarela & total
         Else
             lblResultado.Text = "Humano debes seleccionar un producto y una pasarela"
@@ -36,5 +36,13 @@
         Dim f = New Form1()
         f.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub cbProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbProductos.SelectedIndexChanged
+        imgProductos.ImageLocation = "C:/Users/eugenio/Pictures/VB/" & cbProductos.Text & ".png"
+    End Sub
+
+    Private Sub lbPasarelas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbPasarelas.SelectedIndexChanged
+        imgPasarelas.ImageLocation = "C:/Users/eugenio/Pictures/VB/" & lbPasarelas.Text & ".png"
     End Sub
 End Class
