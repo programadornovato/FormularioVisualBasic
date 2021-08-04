@@ -1,5 +1,16 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show("Hola humano")
+
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        If txtUsuario.Text = "programadornovato" And txtPass.Text = "123" Then
+            MessageBox.Show("Usuario valido")
+        Else
+            MessageBox.Show("Usuario invalido")
+            txtUsuario.Text = ""
+            txtPass.Text = ""
+        End If
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
     End Sub
 End Class
