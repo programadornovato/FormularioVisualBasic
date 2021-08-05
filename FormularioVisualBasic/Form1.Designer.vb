@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,68 +20,41 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
-        Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.Menu = New System.Windows.Forms.MenuStrip()
+        Me.menuNuevo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuAbrir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuCerrar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Menu.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'Menu
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Usuario"
+        Me.Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuNuevo, Me.menuAbrir, Me.menuCerrar})
+        Me.Menu.Location = New System.Drawing.Point(0, 0)
+        Me.Menu.Name = "Menu"
+        Me.Menu.Size = New System.Drawing.Size(895, 24)
+        Me.Menu.TabIndex = 1
+        Me.Menu.Text = "MenuStrip1"
         '
-        'Label2
+        'menuNuevo
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(132, 25)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Contraseña"
+        Me.menuNuevo.Name = "menuNuevo"
+        Me.menuNuevo.Size = New System.Drawing.Size(54, 20)
+        Me.menuNuevo.Text = "Nuevo"
         '
-        'txtUsuario
+        'menuAbrir
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(201, 14)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(271, 33)
-        Me.txtUsuario.TabIndex = 0
-        Me.txtUsuario.Text = "programadornovato"
+        Me.menuAbrir.Name = "menuAbrir"
+        Me.menuAbrir.Size = New System.Drawing.Size(45, 20)
+        Me.menuAbrir.Text = "Abrir"
         '
-        'txtPass
+        'menuCerrar
         '
-        Me.txtPass.Location = New System.Drawing.Point(201, 50)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(271, 33)
-        Me.txtPass.TabIndex = 1
-        Me.txtPass.Text = "123"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(13, 117)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(114, 47)
-        Me.btnSalir.TabIndex = 3
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(358, 117)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(114, 47)
-        Me.btnAceptar.TabIndex = 2
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
+        Me.menuCerrar.Name = "menuCerrar"
+        Me.menuCerrar.Size = New System.Drawing.Size(51, 20)
+        Me.menuCerrar.Text = "Cerrar"
         '
         'Form1
         '
@@ -90,29 +63,25 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.FormularioVisualBasic.My.Resources.Resources.logo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(484, 461)
-        Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.txtPass)
-        Me.Controls.Add(Me.txtUsuario)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(895, 644)
+        Me.Controls.Add(Me.Menu)
         Me.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.IsMdiContainer = True
         Me.Location = New System.Drawing.Point(100, 100)
+        Me.MainMenuStrip = Me.Menu
         Me.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
-        Me.MaximumSize = New System.Drawing.Size(500, 500)
         Me.MinimumSize = New System.Drawing.Size(300, 300)
         Me.Name = "Form1"
         Me.Text = "Formulario 1"
+        Me.Menu.ResumeLayout(False)
+        Me.Menu.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtUsuario As TextBox
-    Friend WithEvents txtPass As TextBox
-    Friend WithEvents btnSalir As Button
-    Friend WithEvents btnAceptar As Button
+    Friend WithEvents Menu As MenuStrip
+    Friend WithEvents menuNuevo As ToolStripMenuItem
+    Friend WithEvents menuAbrir As ToolStripMenuItem
+    Friend WithEvents menuCerrar As ToolStripMenuItem
 End Class
